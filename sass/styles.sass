@@ -1,0 +1,439 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "Raleway", sans-serif
+
+.header
+    width: 100vw
+    height: 90vh
+
+    &-background
+        background-image: url("../image/header-1024.png")
+        width: 100vw
+        height: 100%
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: top 
+    &-logo
+        height: 40vh
+        text-align: center
+        @include mixins.flex-center
+        img
+            width: 200px
+            @include mixins.mobile
+                width: 150px
+    &-text
+        text-align: center
+        color: variables.$white-color
+        font-family: "Raleway", sans-serif 
+        h1
+            font-size: 5.2rem
+            @include mixins.mobile
+                font-size: 3.2rem
+        p
+            font-size: 1.8rem
+            @include mixins.mobile
+                font-size: 1.2rem
+
+
+.first-main
+    background-color: variables.$purple-color
+    height: 60vh
+    width: 100vw
+    color: variables.$white-color
+    @include mixins.mobile
+        height: 110vh
+    &-header
+        text-align: center
+        padding-top: 2rem
+        padding-bottom: 2rem
+        color: variables.$yellow-color
+        font-size: 2rem
+        @include mixins.mobile
+            position: relative
+            top: 140px
+        
+    &-body
+        @include mixins.flex-center
+        padding: 1rem
+        border-style: solid
+        border-radius: 10px
+        border-width: 2px
+        margin-right: 20rem
+        margin-left: 20rem
+        @include mixins.mobile
+            margin-right: 2rem
+            margin-left: 2rem
+            display: flex
+            flex-direction: column
+        
+    &-img
+        width: 10% auto
+        padding: 2em
+        @include mixins.mobile
+            position: relative
+            bottom: 120px
+            width: 200px
+            padding: 2em
+
+    &-text
+        padding-left: 3rem
+        padding-right: 3rem
+        @include mixins.mobile
+            padding-left: 1rem
+            padding-right: 1rem
+    &-icon-blue
+        img
+            position: relative
+            bottom: 100px
+            right: 190px
+            width: 350px
+            @include mixins.mobile
+                width: 150px
+                bottom: - 10px
+                right: 80px
+
+            
+
+.second-main
+    background-color: #03B5B0
+    height: 100vh
+    width: 100vw
+    padding-right: 15rem
+    padding-left: 15rem
+    @include mixins.mobile
+        padding-right: 2rem
+        padding-left: 2rem
+        height: 280vh
+    &-header
+        text-align: center
+        padding-top: 2rem
+        color: variables.$yellow-color
+        font-size: 2rem
+    &-text
+        padding-top: 2rem
+        padding-bottom: 2rem
+        color: variables.$white-color
+    &-cards
+        @include mixins.flex-center
+        .active
+            height: 400px
+            @include mixins.mobile
+                height: 360px
+
+        @include mixins.mobile
+            display: flex
+            flex-direction: column
+
+
+
+    &-card
+        height: 220px
+        overflow: hidden
+        border-radius: 10px
+        margin: 1rem
+        transition: height 0.5s ease-in-out
+        .rotate
+            transform: rotate(-180deg)
+    &-card2
+        height: 220px
+        overflow: hidden
+        border-radius: 10px
+        margin: 1rem
+        transition: height 0.5s ease-in-out
+        img
+            height: 170px
+            padding: 40px
+
+        .rotate
+            transform: rotate(-180deg)
+    &-card3
+        height: 220px
+        overflow: hidden
+        border-radius: 10px
+        margin: 1rem
+        transition: height 0.5s ease-in-out
+        .rotate
+            transform: rotate(-180deg)
+    &-img
+        @include mixins.flex-center
+        background-color: variables.$white-color
+        padding-top: 1rem
+
+    &-toggle
+        @include mixins.flex-center
+        img
+            width: 40px
+            height: 40px
+            position: absolute
+            border-radius: 100px
+            padding: 0.4rem
+            background-color: variables.$white-color
+            cursor: pointer
+            transition: transform ease-in-out 0.5s
+
+    &-toggle2
+        @include mixins.flex-center
+        img        
+            width: 40px
+            height: 40px
+            position: absolute
+            border-radius: 100px
+            padding: 0.4rem
+            background-color: variables.$white-color
+            cursor: pointer
+            transition: transform ease-in-out 0.5s
+    &-toggle3
+        @include mixins.flex-center
+        img
+            width: 40px
+            height: 40px
+            position: absolute
+            border-radius: 100px
+            padding: 0.4rem
+            background-color: variables.$white-color
+            cursor: pointer
+            transition: transform ease-in-out 0.5s
+            
+    &-content
+        text-align: start
+        background-color: variables.$purple-color
+        padding: 1rem
+        padding-top: 3rem
+        color: variables.$white-color
+
+    &-contentYellow
+        text-align: start
+        background-color: variables.$yellow-color
+        padding: 1rem
+        padding-top: 3rem
+        color: variables.$purple-color
+    &-gray-icon
+        img
+            width: 400px
+            position: relative
+            left: 930px
+            @include mixins.mobile
+                width: 150px
+                top: 410px
+                left: 320px
+
+    
+
+    
+.third-main
+    background-color: #353535
+    height: 100vh
+    width: 100vw
+    @include mixins.mobile
+        height: 160vh
+    &-header
+        text-align: center
+        padding-top: 2rem
+        padding-bottom: 2rem
+        color: variables.$green-color
+        font-size: 2rem
+
+    &-content
+        padding-right: 12rem
+        padding-left: 12rem
+        padding-top: 5rem
+        display: flex
+        @include mixins.flex-center
+        color: variables.$white-color
+        @include mixins.mobile
+            padding-right: 0rem
+            padding-left: 0rem
+            padding-top: 0rem
+            display: flex
+            flex-direction: column-reverse
+    &-img
+        img
+            width: 400px
+            @include mixins.mobile
+                width: 350px
+        &-icon-blue
+            img
+                position: relative
+                width: 120px
+                bottom: 430px
+                @include mixins.mobile
+                    width: 70px
+                    bottom: 340px
+
+            
+        &-icon-yellow
+            img
+                position: relative
+                width: 120px
+                left: 290px
+                bottom: 50px
+                @include mixins.mobile
+                    width: 70px
+                    left: 285px
+                    bottom: 30px
+            
+    &-text
+        padding-right: 4rem
+        position: relative
+        bottom: 70px
+        @include mixins.mobile
+            padding-right: 2rem
+            padding-left: 2rem
+
+
+
+
+
+.fourth-main
+    height: 120vh
+    width: 100vw
+    &-text
+        padding-right: 12rem
+        padding-left: 12rem
+        padding-top: 5rem
+        padding-bottom: 3rem
+        @include mixins.mobile
+            padding-right: 2rem
+            padding-left: 2rem
+            padding-top: 2rem
+            padding-bottom: 2rem
+
+    &-circle
+        display: flex
+        @include mixins.flex-center
+        img
+            width: 30rem
+            position: relative
+            left: 200px
+            @include mixins.mobile
+                width: 20rem
+                left: 175px
+                bottom: 5px
+        &-plus
+            cursor: pointer
+            position: relative
+            right: 445px
+            top: 170px
+            @include mixins.mobile
+                right: 310px
+                top: 120px
+
+            img
+                width: 60px
+                padding: 0px
+            
+        &-plus2
+            cursor: pointer
+            position: relative
+            right: 145px
+            top: 170px
+            @include mixins.mobile
+                right: 130px
+                top: 120px
+            img
+                width: 60px
+                padding: 0px
+            
+        &-less
+            cursor: pointer
+            position: relative
+            right: 390px
+            bottom: 150px
+            @include mixins.mobile
+                right: 310px
+                bottom: 100px
+
+            img
+                width: 60px
+                padding: 0px
+        .bgRed
+            background-color: variables.$red-color
+        .bgGray
+            background-color: variables.$gray-color
+        .bgYellow
+            background-color: variables.$yellow-color
+        &-center
+            position: relative
+            width: 100px
+            height: 100px
+            border-radius: 200px
+            border-style: solid
+            border-width: 1px
+            padding: 140px
+            right: 360px
+            top: 10px
+            background-color: variables.$yellow-color
+            @include mixins.mobile
+                width: 10px
+                height: 10px
+                padding: 85px
+                right: 250px
+                top: 4px
+
+            .textColorBlack
+                color: #000
+            .textColorWhite
+                color: #FFF
+            &-text
+                text-align: center
+                position: relative
+                right: 100px
+                bottom: 20px
+                width: 200px
+                font-size: 20px
+                .yellow
+                    font-weight: bolder solid
+                    font-size: 30px
+                    display: none
+                    color: #000
+                .gray
+                    font-weight: bolder solid
+                    font-size: 30px
+                    display: none 
+                    color: #FFF
+                .red
+                    font-weight: bolder solid
+                    font-size: 30px
+                    display: none
+                    color: #FFF
+                .active
+                    display: block
+                
+
+                    
+
+
+                    
+             
+           
+
+            
+
+
+                
+                
+        
+
+
+
+
+    
+.footer
+    background-color:#7A2B58
+    height: 50vh
+    width: 100vw
+    justify-content: center
+    align-items: center
+    display: inline-flex
+
+
+
+
+        
+
+
